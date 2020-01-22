@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+ </div>
+<h2>Here are movies: </h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table" *ngFor="let el of movies">
+      <th scope="row">{{el.title}}</th>
+      <td>{{el.year}}</td>
+      <td>{{el.rating}}</td>
+      <td>{{el.review}}</td>
+      <td>{{el.renre}}</td>
+      <td>{{el.country}}</td>
+      <td>{{el.copies}}</td>
+      
+    </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>
